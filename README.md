@@ -1,4 +1,4 @@
-# Xplosion
+# Xplosion [![](https://jitpack.io/v/com.gitlab.bandev/Xplosion.svg)](https://jitpack.io/#com.gitlab.bandev/Xplosion)
 
 Xplosion is a fork of [SmallBang](https://github.com/hanks-zyh/SmallBang) that has been converted to Kotlin and updated for the latest version of Android :smile:
 
@@ -8,9 +8,19 @@ Twitter like animation for any view :heartbeat:
 
 ## Usage
 
+Add it in your root build.gradle at the end of repositories:
+```groovy
+	allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+**Step 2.** Add the dependency
 ```groovy
 dependencies {
-    implementation '[test]'
+    implementation 'com.gitlab.bandev:Xplosion:1.0.1'
 }
 ```
 
