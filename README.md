@@ -4,6 +4,8 @@ Xplosion is a fork of [SmallBang](https://github.com/hanks-zyh/SmallBang) that h
 
 Twitter like animation for any view :heartbeat:
 
+<img src="screenshots/demo.gif" width="35%" /> 
+
 ## Usage
 
 ```groovy
