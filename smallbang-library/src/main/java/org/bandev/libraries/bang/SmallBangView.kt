@@ -1,4 +1,4 @@
-package xyz.hanks.library.bang
+package org.bandev.libraries.bang
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -13,7 +13,7 @@ import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.OvershootInterpolator
 import android.widget.FrameLayout
-import xyz.hanks.library.R
+import org.bandev.libraries.R
 
 /**
  * Created by hanks.

@@ -1,4 +1,4 @@
-package xyz.hanks.library.bang
+package org.bandev.libraries.bang
 
 import android.animation.ArgbEvaluator
 import android.content.Context
