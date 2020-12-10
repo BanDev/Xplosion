@@ -15,7 +15,7 @@ dependencies {
 ```
 
 ```xml
-<org.bandev.libraries.bang.SmallBangView
+<org.bandev.libraries.xplosion.XplosionView
     android:id="@+id/like_heart"
     android:layout_width="56dp"
     android:layout_height="56dp">
@@ -27,13 +27,13 @@ dependencies {
         android:layout_gravity="center"
         android:src="@drawable/heart_selector"
         android:text="Hello World!"/>
-</org.bandev.libraries.bang.SmallBangView>
+</org.bandev.libraries.xplosion.XplosionView>
 ```
 or
 
 ```xml
 
-<org.bandev.libraries.bang.SmallBangView
+<org.bandev.libraries.xplosion.XplosionView
     android:id="@+id/like_text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -51,8 +51,12 @@ or
         android:text="hanks"
         android:textColor="@color/text_selector"
         android:textSize="14sp"/>
-</org.bandev.libraries.bang.SmallBangView>
+</org.bandev.libraries.xplosion.XplosionView>
 ```
+
+## Acknowledgements
+
+- [Launcher Icon](https://www.flaticon.com/authors/freepik) - Freepik via Flaticon
 
 ## License
 

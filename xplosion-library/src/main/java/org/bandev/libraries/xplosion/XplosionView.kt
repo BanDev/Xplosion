@@ -1,4 +1,4 @@
-package org.bandev.libraries.bang
+package org.bandev.libraries.xplosion
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -23,7 +23,7 @@ import kotlin.math.min
  * Converted to Kotlin by Fennec
  */
 
-class SmallBangView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(context!!, attrs, defStyleAttr) {
+class XplosionView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(context!!, attrs, defStyleAttr) {
     private var circleStartColor: Int
     private var circleEndColor: Int
     private var animScaleFactor: Int
