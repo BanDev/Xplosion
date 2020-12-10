@@ -12,7 +12,9 @@ import kotlin.math.min
 
 /**
  * Created by hanks
+ * Converted to Kotlin by Fennec
  */
+
 class CircleView : View {
     private var startColor = START_COLOR
     private var endColor = START_COLOR

@@ -1,21 +1,19 @@
-# SmallBang
+# Xplosion
 
-twitter like animation for any view :heartbeat:
+Xplosion is a fork of [SmallBang](https://github.com/hanks-zyh/SmallBang) that has been converted to Kotlin and updated for the latest version of Android :smile:
 
-<img src="https://github.com/hanks-zyh/SmallBang/blob/master/screenshots/demo2.gif" width="35%" /> 
-
-[Demo APK](https://github.com/hanks-zyh/SmallBang/blob/master/screenshots/demo.apk?raw=true)
+Twitter like animation for any view :heartbeat:
 
 ## Usage
 
 ```groovy
 dependencies {
-    implementation 'pub.hanks:smallbang:1.2.2'
+    implementation '[test]'
 }
 ```
 
 ```xml
-<xyz.hanks.library.bang.SmallBangView
+<org.bandev.libraries.bang.SmallBangView
     android:id="@+id/like_heart"
     android:layout_width="56dp"
     android:layout_height="56dp">
@@ -27,13 +25,13 @@ dependencies {
         android:layout_gravity="center"
         android:src="@drawable/heart_selector"
         android:text="Hello World!"/>
-</xyz.hanks.library.bang.SmallBangView>
+</org.bandev.libraries.bang.SmallBangView>
 ```
 or
 
 ```xml
 
-<xyz.hanks.library.bang.SmallBangView
+<org.bandev.libraries.bang.SmallBangView
     android:id="@+id/like_text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -51,36 +49,14 @@ or
         android:text="hanks"
         android:textColor="@color/text_selector"
         android:textSize="14sp"/>
-</xyz.hanks.library.bang.SmallBangView>
+</org.bandev.libraries.bang.SmallBangView>
 ```
-## Donate
 
-If this project help you reduce time to develop, you can give me a cup of coffee :)
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UGENU2RU26RUG)
- 
-<img src="https://github.com/hanks-zyh/SmallBang/blob/master/screenshots/donate.png" width="50%" /> 
-
-## Contact & Help
-
-Please fell free to contact me if there is any problem when using the library.
-
-- **email**: zhangyuhan2014@gmail.com
-- **twitter**: https://twitter.com/zhangyuhan3030
-- **weibo**: http://weibo.com/hanksZyh
-- **blog**: http://hanks.pub
-
-welcome to commit [issue](https://github.com/hanks-zyh/SmallBang/issues) & [pr](https://github.com/hanks-zyh/SmallBang/pulls)
-
-
----
 ## License
 
 This library is licensed under the [Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 See [`LICENSE`](LICENSE) for full of the license text.
-
-    Copyright (C) 2015 [Hanks](https://github.com/hanks-zyh)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

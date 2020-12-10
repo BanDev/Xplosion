@@ -13,7 +13,9 @@ import kotlin.math.sin
 
 /**
  * Created by Miroslaw Stanek on 20.12.2015.
+ * Converted to Kotlin by Fennec on 10.12.2020
  */
+
 class DotsView : View {
     private val circlePaints = arrayOfNulls<Paint>(4)
     private var colors = intArrayOf(COLOR_1, COLOR_2, COLOR_3, COLOR_4)

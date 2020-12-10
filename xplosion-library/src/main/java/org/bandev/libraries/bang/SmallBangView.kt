@@ -19,8 +19,10 @@ import org.bandev.libraries.R
 import kotlin.math.min
 
 /**
- * Created by hanks.
+ * Created by hanks
+ * Converted to Kotlin by Fennec
  */
+
 class SmallBangView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(context!!, attrs, defStyleAttr) {
     private var circleStartColor: Int
     private var circleEndColor: Int
