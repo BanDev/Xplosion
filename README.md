@@ -24,6 +24,7 @@ dependencies {
 }
 ```
 
+**Step 3.** Add the view to your layout
 ```xml
 <org.bandev.libraries.xplosion.XplosionView
     android:id="@+id/like_heart"
@@ -39,7 +40,7 @@ dependencies {
         android:text="Hello World!"/>
 </org.bandev.libraries.xplosion.XplosionView>
 ```
-or
+**or**
 
 ```xml
 
