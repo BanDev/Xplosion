@@ -4,7 +4,9 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.annotation.TargetApi
 import android.content.Context
+import android.os.Build
 import android.util.AttributeSet
 import android.util.FloatProperty
 import android.util.Property
@@ -14,6 +16,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.OvershootInterpolator
 import android.widget.FrameLayout
 import org.bandev.libraries.R
+import kotlin.math.min
 
 /**
  * Created by hanks.
@@ -59,7 +62,7 @@ class SmallBangView @JvmOverloads constructor(context: Context?, attrs: Attribut
         if (scaleView == null) {
             scaleView = findScaleView()
         }
-        val iconSize = Math.min(scaleView!!.measuredWidth, scaleView!!.measuredHeight)
+        val iconSize = min(scaleView!!.measuredWidth, scaleView!!.measuredHeight)
         for (i in 0 until childCount) {
             val child = getChildAt(i)
             if (child is CircleView) {
@@ -147,7 +150,8 @@ class SmallBangView @JvmOverloads constructor(context: Context?, attrs: Attribut
     }
 
     companion object {
-        val SCALE: Property<View?, Float> = object : FloatProperty<View>("scale") {
+        val SCALE: Property<View?, Float> = @TargetApi(Build.VERSION_CODES.N)
+        object : FloatProperty<View>("scale") {
             override fun setValue(`object`: View, value: Float) {
                 `object`.scaleX = value
                 `object`.scaleY = value

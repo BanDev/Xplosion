@@ -8,6 +8,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.util.Property
 import android.view.View
+import kotlin.math.min
 
 /**
  * Created by hanks
@@ -47,7 +48,7 @@ class CircleView : View {
         }
         val width = width
         val height = height
-        val radius = Math.min(width, height) / 2
+        val radius = min(width, height) / 2
         if (progress <= 0.5) {
             canvas.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius * 2 * progress, circlePaint)
             return

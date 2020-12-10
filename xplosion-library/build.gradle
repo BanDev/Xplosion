@@ -1,15 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-
 android {
     compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 30
-        versionCode 5
-        versionName "1.2.2"
+        versionCode 6
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -20,19 +19,9 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.21"
 }
 
-apply plugin: 'com.novoda.bintray-release'
-publish {
-    userOrg = 'hanks-zyh'
-    groupId = 'pub.hanks'
-    uploadName = 'smallbang'
-    artifactId = 'smallbang'
-    publishVersion = '1.2.2'
-    desc = 'SmallBang v2'
-    website = 'https://github.com/hanks-zyh/SmallBang'
-}
 repositories {
     mavenCentral()
 }

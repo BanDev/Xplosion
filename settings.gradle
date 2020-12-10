@@ -1,1 +1,1 @@
-include ':simple', ':smallbang-library'
+include ':simple', ':xplosion-library'
