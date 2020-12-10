@@ -18,6 +18,6 @@ object Utils {
     }
 
     fun dp2px(context: Context, dp: Float): Int {
-        return (context.resources.displayMetrics.density * dp).roundToLong()
+        return (context.resources.displayMetrics.density * dp).roundToLong().toInt()
     }
 }
