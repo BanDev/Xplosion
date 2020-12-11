@@ -36,8 +36,7 @@ dependencies {
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_gravity="center"
-        android:src="@drawable/heart_selector"
-        android:text="Hello World!"/>
+        android:src="@drawable/heart_selector"/>
 </org.bandev.libraries.xplosion.XplosionView>
 ```
 **or**
