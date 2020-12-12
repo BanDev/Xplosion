@@ -1,4 +1,4 @@
-# Xplosion [![](https://jitpack.io/v/com.gitlab.bandev/Xplosion.svg)](https://jitpack.io/#com.gitlab.bandev/Xplosion)
+# Xplosion [![](https://jitpack.io/v/BanDevApps/Xplosion.svg)](https://jitpack.io/#BanDevApps/Xplosion)
 
 Xplosion is a fork of [SmallBang](https://github.com/hanks-zyh/SmallBang) that has been converted to Kotlin and updated for the latest version of Android :smile:
 
