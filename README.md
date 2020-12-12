@@ -1,4 +1,4 @@
-# Xplosion [![](https://jitpack.io/v/BanDevApps/Xplosion.svg)](https://jitpack.io/#BanDevApps/Xplosion)
+# Xplosion
 
 Xplosion is a fork of [SmallBang](https://github.com/hanks-zyh/SmallBang) that has been converted to Kotlin and updated for the latest version of Android :smile:
 
@@ -20,7 +20,7 @@ allprojects {
 **Step 2.** Add the dependency
 ```groovy
 dependencies {
-    implementation 'com.gitlab.bandev:Xplosion:1.0.1'
+    implementation 'com.github.BanDevApps:Xplosion:1.0.1'
 }
 ```
 
@@ -63,10 +63,6 @@ dependencies {
         android:textSize="14sp"/>
 </org.bandev.libraries.xplosion.XplosionView>
 ```
-
-## Acknowledgements
-
-- [Launcher Icon](https://www.flaticon.com/authors/freepik) - Freepik via Flaticon
 
 ## License
 
