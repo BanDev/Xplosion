@@ -27,41 +27,14 @@ dependencies {
 **Step 3.** Add the view to your layout
 ```xml
 <org.bandev.libraries.xplosion.XplosionView
-    android:id="@+id/like_heart"
-    android:layout_width="56dp"
-    android:layout_height="56dp">
-
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_gravity="center"
-        android:src="@drawable/heart_selector"/>
-</org.bandev.libraries.xplosion.XplosionView>
-```
-**or**
-
-```xml
-
-<org.bandev.libraries.xplosion.XplosionView
-    android:id="@+id/like_text"
+    android:id="@+id/xplosion"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:circle_end_color="#ffbc00"
-    app:circle_start_color="#fa9651"
-    app:dots_primary_color="#fa9651"
-    app:dots_secondary_color="#ffbc00">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="hanks"
-        android:textColor="@color/text_selector"
-        android:textSize="14sp"/>
+    ...
+    
 </org.bandev.libraries.xplosion.XplosionView>
+
 ```
 
 ## License
