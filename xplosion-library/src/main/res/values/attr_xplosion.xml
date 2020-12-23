@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="SmallBangView">
+    <declare-styleable name="XplosionView">
         <attr name="dots_primary_color" format="color|reference" />
         <attr name="dots_secondary_color" format="color|reference" />
         <attr name="circle_start_color" format="color|reference" />

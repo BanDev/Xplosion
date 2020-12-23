@@ -169,13 +169,13 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
 
     init {
         setWillNotDraw(false)
-        val array = getContext().obtainStyledAttributes(attrs, R.styleable.SmallBangView, defStyleAttr, 0)
-        circleStartColor = array.getColor(R.styleable.SmallBangView_circle_start_color, CircleView.START_COLOR)
-        circleEndColor = array.getColor(R.styleable.SmallBangView_circle_end_color, CircleView.END_COLOR)
-        val dotPrimaryColor = array.getColor(R.styleable.SmallBangView_dots_primary_color, DotsView.COLOR_1)
-        val dotSecondaryColor = array.getColor(R.styleable.SmallBangView_dots_secondary_color, DotsView.COLOR_2)
-        animScaleFactor = array.getColor(R.styleable.SmallBangView_anim_scale_factor, 3)
-        val status = array.getBoolean(R.styleable.SmallBangView_liked, false)
+        val array = getContext().obtainStyledAttributes(attrs, R.styleable.XplosionView, defStyleAttr, 0)
+        circleStartColor = array.getColor(R.styleable.XplosionView_circle_start_color, CircleView.START_COLOR)
+        circleEndColor = array.getColor(R.styleable.XplosionView_circle_end_color, CircleView.END_COLOR)
+        val dotPrimaryColor = array.getColor(R.styleable.XplosionView_dots_primary_color, DotsView.COLOR_1)
+        val dotSecondaryColor = array.getColor(R.styleable.XplosionView_dots_secondary_color, DotsView.COLOR_2)
+        animScaleFactor = array.getColor(R.styleable.XplosionView_anim_scale_factor, 3)
+        val status = array.getBoolean(R.styleable.XplosionView_liked, false)
         isSelected = status
         array.recycle()
         OVERSHOOT_INTERPOLATOR = OvershootInterpolator(animScaleFactor.toFloat())
