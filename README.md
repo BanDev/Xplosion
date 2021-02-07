@@ -20,7 +20,7 @@ allprojects {
 **Step 2.** Add the dependency
 ```groovy
 dependencies {
-    implementation 'com.github.BanDevApps:Xplosion:1.0.1'
+    implementation 'com.github.BanDev:Xplosion:1.0.2'
 }
 ```
 
