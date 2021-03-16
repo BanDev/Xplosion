@@ -1,4 +1,4 @@
-package org.bandev.libraries.xplosion
+package uk.bandev.xplosion
 
 import android.content.Context
 import kotlin.math.max

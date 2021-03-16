@@ -1,4 +1,4 @@
-package org.bandev.libraries.xplosion
+package uk.bandev.xplosion
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -122,7 +122,8 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
         vCircle.setProgress(0f)
         vDotsView.setCurrentProgress(0f)
         animatorSet = AnimatorSet()
-        val outerCircleAnimator = ObjectAnimator.ofFloat(vCircle, CircleView.OUTER_CIRCLE_RADIUS_PROGRESS, 0.1f, 1f)
+        val outerCircleAnimator = ObjectAnimator.ofFloat(vCircle,
+            CircleView.OUTER_CIRCLE_RADIUS_PROGRESS, 0.1f, 1f)
         outerCircleAnimator.duration = 250
         val starScaleAnimator = ObjectAnimator.ofFloat(scaleView, SCALE, 0.2f, 1f)
         starScaleAnimator.duration = 250
@@ -170,10 +171,18 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
     init {
         setWillNotDraw(false)
         val array = getContext().obtainStyledAttributes(attrs, R.styleable.XplosionView, defStyleAttr, 0)
-        circleStartColor = array.getColor(R.styleable.XplosionView_circle_start_color, CircleView.START_COLOR)
-        circleEndColor = array.getColor(R.styleable.XplosionView_circle_end_color, CircleView.END_COLOR)
-        val dotPrimaryColor = array.getColor(R.styleable.XplosionView_dots_primary_color, DotsView.COLOR_1)
-        val dotSecondaryColor = array.getColor(R.styleable.XplosionView_dots_secondary_color, DotsView.COLOR_2)
+        circleStartColor = array.getColor(R.styleable.XplosionView_circle_start_color,
+            CircleView.START_COLOR
+        )
+        circleEndColor = array.getColor(R.styleable.XplosionView_circle_end_color,
+            CircleView.END_COLOR
+        )
+        val dotPrimaryColor = array.getColor(R.styleable.XplosionView_dots_primary_color,
+            DotsView.COLOR_1
+        )
+        val dotSecondaryColor = array.getColor(R.styleable.XplosionView_dots_secondary_color,
+            DotsView.COLOR_2
+        )
         animScaleFactor = array.getColor(R.styleable.XplosionView_anim_scale_factor, 3)
         val status = array.getBoolean(R.styleable.XplosionView_liked, false)
         isSelected = status

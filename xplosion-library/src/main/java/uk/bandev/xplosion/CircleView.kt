@@ -1,4 +1,4 @@
-package org.bandev.libraries.xplosion
+package uk.bandev.xplosion
 
 import android.animation.ArgbEvaluator
 import android.content.Context

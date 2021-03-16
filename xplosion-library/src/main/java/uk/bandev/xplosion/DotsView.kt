@@ -1,4 +1,4 @@
-package org.bandev.libraries.xplosion
+package uk.bandev.xplosion
 
 import android.animation.ArgbEvaluator
 import android.content.Context
@@ -107,7 +107,13 @@ class DotsView : View {
 
     private fun updateInnerDotsPosition() {
         currentRadius2 = if (currentProgress < 0.3f) {
-            Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.0, 0.3, 0.0, maxInnerDotsRadius.toDouble()).toFloat()
+            Utils.mapValueFromRangeToRange(
+                currentProgress.toDouble(),
+                0.0,
+                0.3,
+                0.0,
+                maxInnerDotsRadius.toDouble()
+            ).toFloat()
         } else {
             maxInnerDotsRadius
         }
@@ -116,36 +122,78 @@ class DotsView : View {
                 maxDotSize
             }
             currentProgress < 0.5 -> {
-                Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.2, 0.5, maxDotSize.toDouble(), 0.5 * maxDotSize).toFloat()
+                Utils.mapValueFromRangeToRange(
+                    currentProgress.toDouble(),
+                    0.2,
+                    0.5,
+                    maxDotSize.toDouble(),
+                    0.5 * maxDotSize
+                ).toFloat()
             }
             else -> {
-                Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.5, 1.0, (maxDotSize * 0.5f).toDouble(), 0.0).toFloat()
+                Utils.mapValueFromRangeToRange(
+                    currentProgress.toDouble(),
+                    0.5,
+                    1.0,
+                    (maxDotSize * 0.5f).toDouble(),
+                    0.0
+                ).toFloat()
             }
         }
     }
 
     private fun updateOuterDotsPosition() {
         currentRadius1 = if (currentProgress < 0.3f) {
-            Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.0, 0.3, 0.0, (maxOuterDotsRadius * 0.8f).toDouble()).toFloat()
+            Utils.mapValueFromRangeToRange(
+                currentProgress.toDouble(),
+                0.0,
+                0.3,
+                0.0,
+                (maxOuterDotsRadius * 0.8f).toDouble()
+            ).toFloat()
         } else {
-            Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.3, 1.0, (0.8f * maxOuterDotsRadius).toDouble(), maxOuterDotsRadius.toDouble()).toFloat()
+            Utils.mapValueFromRangeToRange(
+                currentProgress.toDouble(),
+                0.3,
+                1.0,
+                (0.8f * maxOuterDotsRadius).toDouble(),
+                maxOuterDotsRadius.toDouble()
+            ).toFloat()
         }
         currentDotSize1 = if (currentProgress < 0.7) {
             maxDotSize
         } else {
-            Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.7, 1.0, maxDotSize.toDouble(), 0.0).toFloat()
+            Utils.mapValueFromRangeToRange(
+                currentProgress.toDouble(),
+                0.7,
+                1.0,
+                maxDotSize.toDouble(),
+                0.0
+            ).toFloat()
         }
     }
 
     private fun updateDotsPaints() {
         if (currentProgress < 0.5f) {
-            val progress = Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.0, 0.5, 0.0, 1.0).toFloat()
+            val progress = Utils.mapValueFromRangeToRange(
+                currentProgress.toDouble(),
+                0.0,
+                0.5,
+                0.0,
+                1.0
+            ).toFloat()
             circlePaints[0]!!.color = (argbEvaluator.evaluate(progress, colors[0], colors[1]) as Int)
             circlePaints[1]!!.color = (argbEvaluator.evaluate(progress, colors[1], colors[2]) as Int)
             circlePaints[2]!!.color = (argbEvaluator.evaluate(progress, colors[2], colors[3]) as Int)
             circlePaints[3]!!.color = (argbEvaluator.evaluate(progress, colors[3], colors[0]) as Int)
         } else {
-            val progress = Utils.mapValueFromRangeToRange(currentProgress.toDouble(), 0.5, 1.0, 0.0, 1.0).toFloat()
+            val progress = Utils.mapValueFromRangeToRange(
+                currentProgress.toDouble(),
+                0.5,
+                1.0,
+                0.0,
+                1.0
+            ).toFloat()
             circlePaints[0]!!.color = (argbEvaluator.evaluate(progress, colors[1], colors[2]) as Int)
             circlePaints[1]!!.color = (argbEvaluator.evaluate(progress, colors[2], colors[3]) as Int)
             circlePaints[2]!!.color = (argbEvaluator.evaluate(progress, colors[3], colors[0]) as Int)
