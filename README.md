@@ -8,32 +8,32 @@ Twitter like animation for any view :heartbeat:
 
 ## Usage
 
-**Step 1.** Add it in your root build.gradle at the end of repositories:
+**Step 1.** Make sure `mavenCentral()` is added as a dependency in your root gradle file:
 ```groovy
 allprojects {
     repositories {
-        maven { url 'https://jitpack.io' }
+        mavenCentral()
     }
 }
 ```
 
-**Step 2.** Add the dependency
+**Step 2.** Add the dependency to your app's project gradle file:
 ```groovy
 dependencies {
-    implementation 'com.github.BanDev:Xplosion:1.0.4'
+    implementation 'uk.bandev:xplosion:1.0.5'
 }
 ```
 
 **Step 3.** Add the view to your layout
 ```xml
-<org.bandev.libraries.xplosion.XplosionView
+<uk.bandev.xplosion.XplosionView
     android:id="@+id/xplosion"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     ...
     
-</org.bandev.libraries.xplosion.XplosionView>
+</uk.bandev.xplosion.XplosionView>
 
 ```
 
