@@ -3,7 +3,6 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
         maven { url "https://plugins.gradle.org/m2/" }
     }
 
@@ -22,8 +21,13 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         maven { url "https://plugins.gradle.org/m2/" }
+    }
+
+    plugins.withId("com.vanniktech.maven.publish") {
+        mavenPublish {
+            sonatypeHost = "S01"
+        }
     }
 }
 

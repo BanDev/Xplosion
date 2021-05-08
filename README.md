@@ -20,7 +20,7 @@ allprojects {
 **Step 2.** Add the dependency to your app's project gradle file:
 ```groovy
 dependencies {
-    implementation 'uk.bandev:xplosion:1.0.5'
+    implementation 'uk.bandev:xplosion:1.0.6'
 }
 ```
 

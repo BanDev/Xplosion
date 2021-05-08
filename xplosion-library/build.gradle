@@ -1,11 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-ext {
-    RELEASE_REPOSITORY_URL = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-    SNAPSHOT_REPOSITORY_URL = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-}
-
 apply plugin: 'com.vanniktech.maven.publish'
 apply from: file('publish.gradle')
 
@@ -16,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 30
-        versionCode 9
-        versionName "1.0.5"
+        versionCode 10
+        versionName "1.0.6"
     }
 
     buildTypes {
