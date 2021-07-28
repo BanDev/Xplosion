@@ -46,11 +46,11 @@ dependencies {
 &lt;uk.bandev.xplosion.XplosionView
     android:id="@+id/xplosion"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"&rt;
+    android:layout_height="wrap_content"&gt;
 
     ...
     
-&lt;/uk.bandev.xplosion.XplosionView&rt;</pre>
+&lt;/uk.bandev.xplosion.XplosionView&gt;</pre>
             </li>   
     </ul>
 
