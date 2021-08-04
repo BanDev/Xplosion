@@ -37,10 +37,14 @@ class CircleView : View {
 
     private fun init() {
         setWillNotDraw(false)
-        circlePaint.style = Paint.Style.FILL
-        circlePaint.color = START_COLOR
-        ringPaint.style = Paint.Style.STROKE
-        ringPaint.color = START_COLOR
+        circlePaint.apply {
+            style = Paint.Style.FILL
+            color = START_COLOR
+        }
+        ringPaint.apply {
+            style = Paint.Style.STROKE
+            color = START_COLOR
+        }
     }
 
     override fun onDraw(canvas: Canvas) {

@@ -103,52 +103,51 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
     }
 
     fun stopAnimation() {
-        if (animatorSet != null) {
-            animatorSet!!.cancel()
-        }
-        scaleView!!.scaleX = 1f
-        scaleView!!.scaleY = 1f
+        animatorSet?.cancel()
+        scaleX = 1f
+        scaleY = 1f
         vCircle.setProgress(0f)
         vDotsView.setCurrentProgress(0f)
     }
 
     @JvmOverloads
     fun likeAnimation(listener: Animator.AnimatorListener? = null) {
-        if (animatorSet != null) {
-            animatorSet!!.cancel()
-        }
-        scaleView!!.scaleX = 0f
-        scaleView!!.scaleY = 0f
+        animatorSet?.cancel()
+        scaleX = 0f
+        scaleY = 0f
         vCircle.setProgress(0f)
         vDotsView.setCurrentProgress(0f)
-        animatorSet = AnimatorSet()
-        val outerCircleAnimator = ObjectAnimator.ofFloat(vCircle,
-            CircleView.OUTER_CIRCLE_RADIUS_PROGRESS, 0.1f, 1f)
-        outerCircleAnimator.duration = 250
-        val starScaleAnimator = ObjectAnimator.ofFloat(scaleView, SCALE, 0.2f, 1f)
-        starScaleAnimator.duration = 250
-        starScaleAnimator.startDelay = 250
-        starScaleAnimator.interpolator = OVERSHOOT_INTERPOLATOR
-        val dotsAnimator = ObjectAnimator.ofFloat(vDotsView, DotsView.DOTS_PROGRESS, 0f, 1f)
-        dotsAnimator.duration = 800
-        dotsAnimator.startDelay = 50
-        dotsAnimator.interpolator = ACCELERATE_DECELERATE_INTERPOLATOR
-        animatorSet!!.playTogether(
+        val outerCircleAnimator = ObjectAnimator.ofFloat(vCircle, CircleView.OUTER_CIRCLE_RADIUS_PROGRESS, 0.1f, 1f).apply {
+            duration = 250
+        }
+        val starScaleAnimator = ObjectAnimator.ofFloat(scaleView, SCALE, 0.2f, 1f).apply {
+            duration = 250
+            startDelay = 250
+            interpolator = OVERSHOOT_INTERPOLATOR
+        }
+        val dotsAnimator = ObjectAnimator.ofFloat(vDotsView, DotsView.DOTS_PROGRESS, 0f, 1f).apply {
+            duration = 800
+            startDelay = 50
+            interpolator = ACCELERATE_DECELERATE_INTERPOLATOR
+        }
+        animatorSet = AnimatorSet().apply {
+            playTogether(
                 outerCircleAnimator,
                 starScaleAnimator,
                 dotsAnimator
-        )
-        animatorSet!!.addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationCancel(animation: Animator) {
-                vCircle.setProgress(0f)
-                vDotsView.setCurrentProgress(0f)
-                scaleView!!.scaleX = 1f
-                scaleView!!.scaleY = 1f
+            )
+            addListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationCancel(animation: Animator) {
+                    vCircle.setProgress(0f)
+                    vDotsView.setCurrentProgress(0f)
+                    scaleX = 1f
+                    scaleY = 1f
+                }
+            })
+            start()
+            if (listener != null) {
+                addListener(listener)
             }
-        })
-        animatorSet!!.start()
-        if (listener != null) {
-            animatorSet!!.addListener(listener)
         }
     }
 
@@ -189,17 +188,21 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
         array.recycle()
         OVERSHOOT_INTERPOLATOR = OvershootInterpolator(animScaleFactor.toFloat())
         ACCELERATE_DECELERATE_INTERPOLATOR = AccelerateDecelerateInterpolator()
-        val dotParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
-        dotParams.gravity = Gravity.CENTER
-        vDotsView = DotsView(getContext())
-        vDotsView.layoutParams = dotParams
-        vDotsView.setColors(intArrayOf(dotPrimaryColor, dotSecondaryColor, dotPrimaryColor, dotSecondaryColor))
-        val circleParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
-        circleParams.gravity = Gravity.CENTER
-        vCircle = CircleView(getContext())
-        vCircle.setStartColor(circleStartColor)
-        vCircle.setEndColor(circleEndColor)
-        vCircle.layoutParams = circleParams
+        val dotParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT).apply {
+            gravity = Gravity.CENTER
+        }
+        vDotsView = DotsView(getContext()).apply {
+            layoutParams = dotParams
+            setColors(intArrayOf(dotPrimaryColor, dotSecondaryColor, dotPrimaryColor, dotSecondaryColor))
+        }
+        val circleParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT).apply {
+            gravity = Gravity.CENTER
+        }
+        vCircle = CircleView(getContext()).apply {
+            setStartColor(circleStartColor)
+            setEndColor(circleEndColor)
+            layoutParams = circleParams
+        }
         addView(vDotsView)
         addView(vCircle)
     }

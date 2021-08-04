@@ -204,10 +204,9 @@ class DotsView : View {
     private fun updateDotsAlpha() {
         val progress = Utils.clamp(currentProgress.toDouble(), 0.6, 1.0).toFloat()
         val alpha = Utils.mapValueFromRangeToRange(progress.toDouble(), 0.6, 1.0, 255.0, 0.0).toInt()
-        circlePaints[0]!!.alpha = alpha
-        circlePaints[1]!!.alpha = alpha
-        circlePaints[2]!!.alpha = alpha
-        circlePaints[3]!!.alpha = alpha
+        for (i in circlePaints.indices) {
+            circlePaints[i]!!.alpha = alpha
+        }
     }
 
     companion object {
