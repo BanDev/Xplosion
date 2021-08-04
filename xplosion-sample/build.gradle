@@ -18,11 +18,8 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
-    buildTypes {
-       release {
-           minifyEnabled false
-           proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-       }
+    lintOptions {
+        abortOnError false
     }
 
     compileOptions {
@@ -36,6 +33,13 @@ android {
 
     buildFeatures {
         viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 }
 
