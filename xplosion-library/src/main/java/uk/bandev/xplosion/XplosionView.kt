@@ -95,7 +95,7 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
                 return child
             }
         }
-        throw RuntimeException("must have one child in SmallBangView")
+        throw RuntimeException("must have one child in XplosionView")
     }
 
     private fun isScaleView(child: View?): Boolean {
