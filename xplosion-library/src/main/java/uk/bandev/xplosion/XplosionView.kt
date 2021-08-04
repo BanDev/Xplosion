@@ -104,8 +104,10 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
 
     fun stopAnimation() {
         animatorSet?.cancel()
-        scaleX = 1f
-        scaleY = 1f
+        scaleView?.apply {
+            scaleX = 0f
+            scaleY = 0f
+        }
         vCircle.setProgress(0f)
         vDotsView.setCurrentProgress(0f)
     }
@@ -113,8 +115,10 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
     @JvmOverloads
     fun likeAnimation(listener: Animator.AnimatorListener? = null) {
         animatorSet?.cancel()
-        scaleX = 0f
-        scaleY = 0f
+        scaleView?.apply {
+            scaleX = 0f
+            scaleY = 0f
+        }
         vCircle.setProgress(0f)
         vDotsView.setCurrentProgress(0f)
         val outerCircleAnimator = ObjectAnimator.ofFloat(vCircle, CircleView.OUTER_CIRCLE_RADIUS_PROGRESS, 0.1f, 1f).apply {
@@ -140,8 +144,10 @@ class XplosionView @JvmOverloads constructor(context: Context?, attrs: Attribute
                 override fun onAnimationCancel(animation: Animator) {
                     vCircle.setProgress(0f)
                     vDotsView.setCurrentProgress(0f)
-                    scaleX = 1f
-                    scaleY = 1f
+                    scaleView?.apply {
+                        scaleX = 0f
+                        scaleY = 0f
+                    }
                 }
             })
             start()
