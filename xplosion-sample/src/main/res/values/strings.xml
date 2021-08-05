@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Xplosion sample</string>
+    <string name="heart_outline_description">An outline of a heart</string>
+    <string name="heart_red_description">A filled red heart</string>
 </resources>

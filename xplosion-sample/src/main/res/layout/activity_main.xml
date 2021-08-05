@@ -17,7 +17,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_heart_outline" />
+            app:srcCompat="@drawable/ic_heart_outline"
+            android:contentDescription="@string/heart_outline_description" />
 
     </uk.bandev.xplosion.XplosionView>
 

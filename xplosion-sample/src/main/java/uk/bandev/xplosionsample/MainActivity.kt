@@ -20,9 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         heart.setOnClickListener {
             if (isLiked) {
-                heart.setImageResource(R.drawable.ic_heart_outline)
+                heart.apply {
+                    setImageResource(R.drawable.ic_heart_outline)
+                    contentDescription = getString(R.string.heart_outline_description)
+                }
             } else {
-                heart.setImageResource(R.drawable.ic_heart_red)
+                heart.apply {
+                    setImageResource(R.drawable.ic_heart_red)
+                    contentDescription = getString(R.string.heart_red_description)
+                }
                 heartAnimator.likeAnimation()
             }
             isLiked = !isLiked
