@@ -1,9 +1,5 @@
 apply plugin: 'maven-publish'
 
-def LIB_GROUP_ID = 'uk.bandev'
-def LIB_ARTIFACT_ID = 'xplosion'
-def LIB_VERSION = '1.0.6'
-
 task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier "sources"
@@ -26,9 +22,9 @@ publishing {
     }
     publications {
         codeview(MavenPublication) {
-            groupId LIB_GROUP_ID
-            artifactId LIB_ARTIFACT_ID
-            version LIB_VERSION
+            groupId GROUP
+            artifactId POM_ARTIFACT_ID
+            version VERSION_NAME
             artifact("$buildDir/outputs/aar/xplosion-library-debug.aar")
             artifact(sourceJar)
 

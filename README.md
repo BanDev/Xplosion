@@ -35,7 +35,7 @@ allprojects {
             <br>
             <pre>
 dependencies {
-    implementation 'uk.bandev:xplosion:1.0.6'
+    implementation 'uk.bandev:xplosion:1.0.7'
 }</pre>
         </li>   
         <li>
